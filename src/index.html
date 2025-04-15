@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/styles/modern-reset.css" />
+    <link rel="stylesheet" href="/src/styles/styles.css" />
+    <script src="/src/js/index.js" type="module" defer></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <form class="sign-up" novalidate>
+      <form-group>
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="you@example.com"
+          required
+        />
+        <p class="error-msg"></p>
+      </form-group>
+      <form-group>
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+          title="Password must be at least 8 characters and include one uppercase letter, one lowercase letter, and one number."
+          required
+        />
+        <p class="error-msg"></p>
+      </form-group>
+      <form-group>
+        <label for="confirmPassword">Confirm Password:</label>
+        <input
+          type="password"
+          id="confirmPassword"
+          name="confirmPassword"
+          required
+        />
+        <p class="error-msg"></p>
+      </form-group>
+      <form-group>
+        <label for="country">Country:</label>
+        <select id="country" name="country" required>
+          <option value="">Select a country</option>
+          <option value="UK">United Kingdom</option>
+          <option value="US">United States</option>
+          <option value="CA">Canada</option>
+          <option value="AU">Australia</option>
+        </select>
+        <p class="error-msg"></p>
+      </form-group>
+      <form-group>
+        <label for="postcode">Postcode:</label>
+        <input
+          type="text"
+          id="postcode"
+          name="postcode"
+          pattern="^[A-Z]{1,2}\d[A-Z\d]? ?\d[A-Z]{2}$"
+          title="Enter a valid UK postcode (e.g., SW1A 1AA)"
+          required
+        />
+        <p class="error-msg"></p>
+      </form-group>
+      <button type="submit" id="submit">Submit</button>
+    </form>
+  </body>
+</html>
