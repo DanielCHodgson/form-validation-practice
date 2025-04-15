@@ -1,0 +1,1 @@
+Built this foprm validator as part of the Odin project practice. Wasn't an "assignment" so never bothered to set up a repo initially. But works well enough that I want to keep it for furture reference as it was very useful for learning the validity API.
